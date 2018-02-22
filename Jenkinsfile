@@ -13,12 +13,9 @@ pipeline {
       }
     }
     stage('Deploy to Zeit'){
-      when {
-        branch 'master'
-      }
       steps {
         echo "Starting deployment from master BRANCH"
-        sh 'now'
+        sh 'npm start'
       }
     }
   }
