@@ -10,8 +10,6 @@ pipeline {
         sh 'npm --version'
         sh 'npm install'
         sh 'npm install now'
-        sh 'ng install'
-        sh 'ng run build'
       }
     }
     stage('Deploy to Zeit'){
