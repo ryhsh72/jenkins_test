@@ -19,14 +19,9 @@ pipeline {
         branch 'master'
       }
       steps {
-      echo "Starting deployment from master BRANCH"
+        echo "Starting deployment from master BRANCH"
+        sh 'now'
       }
-      stage('Sending Build to Zeit') {
-          steps {
-            sh 'now'
-          }
-        }
-
     }
   }
 }
