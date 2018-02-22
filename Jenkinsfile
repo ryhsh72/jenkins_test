@@ -7,11 +7,11 @@ pipeline {
   stages {
     stage('Build on Jenkins') {
       steps {
-        'npm --version'
-        'npm install'
-        'npm install now'
-        'ng install'
-        'ng run build'
+        sh 'npm --version'
+        sh 'npm install'
+        sh 'npm install now'
+        sh 'ng install'
+        sh 'ng run build'
       }
     }
     stage('Deploy to Zeit'){
@@ -20,7 +20,7 @@ pipeline {
       }
       steps {
         echo "Starting deployment from master BRANCH"
-        'now'
+        sh 'now'
       }
     }
   }
